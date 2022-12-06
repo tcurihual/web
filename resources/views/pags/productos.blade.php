@@ -16,8 +16,8 @@
                 <td> Cherry MX Blue</td>
                 <td>$9,990</td>
                 <td>
-                    <img src="../public/media/imgs/componentes/cherry_mx_blue.png" alt="">
-                    <audio src="../public/media/audio/cherrymxblue.mp3" id="audioblue"></audio>
+                    <img src="{{asset('media/imgs/componentes/cherry_mx_blue.png')}}"  alt="">
+                    <audio src="{{asset('media/audio/cherrymxblue.png')}}" id="audioblue"></audio>
                     <button id="playblue">Play &#9658</button>
                 </td>
             </tr>
@@ -25,20 +25,20 @@
                 <td>Cherry MX Brown</td>
                 <td>$9,990</td>
                 <td>
-                    <img src="../public/media/imgs/componentes/cherry_mx_brown.png" alt=""> 
-                    <audio src="../public/media/audio/cherrymxbrown.mp3" id="audiobrown"></audio>
+                    <img src="{{asset('media/imgs/componentes/cherry_mx_brown.png')}}" alt=""> 
+                    <audio src="{{asset('media/audio/cherrymxbrown.png')}}" id="audiobrown"></audio>
                     <button id="playbrown">Play &#9658</button>
                 </td>
             </tr>
             <tr> <!-- tercera fila de la tabla -->
                 <td>Plate Aluminio</td>
                 <td>$40,000</td>
-                <td><img src="../public/media/imgs/componentes/aluminium_plate.png" alt=""></td>
+                <td><img src="{{asset('media/imgs/componentes/aluminium_plate.png')}}" alt=""></td>
             </tr>
             <tr> <!-- cuarta fila de la tabla -->
                 <td>Case 60%</td>
                 <td>$80,000</td>
-                <td><img src="../public/media/imgs/componentes/case_60.png" alt=""></td>
+                <td><img src="{{asset('media/imgs/componentes/case_60.png')}}" alt=""></td>
             </tr>    
         </tbody>
     </table>

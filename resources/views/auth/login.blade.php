@@ -1,23 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-  Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <form action="{{route('login-usuario')}}" method="post">
+@extends('starter')
+@section('content')
+    <div class="formulario">
+        <form action="{{route('login-usuario')}}" method="post">
         @csrf
-        <div class="container">
+            <h2>Iniciar Sesion</h2>
             <label for="correo"><b>Correo</b></label>
             <input type="email" placeholder="Ingresa tu correo" name="correo" required>
 
             <label for="contrasena"><b>Contrasena</b></label>
             <input type="password" placeholder="Ingresa tu contrasena" name="contrasena" required>
 
-              <button type="submit">Iniciar Sesion</button>
-        </div>
-    </form> 
-</body>
-</html>
+            <button type="submit">Iniciar Sesion</button>
+            <a href="{{url('/registro')}}">Aun no te registras? Hazlo aqui!</a>
+        </form> 
+    </div>
+@endsection

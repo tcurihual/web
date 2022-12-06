@@ -1,9 +1,8 @@
+<!DOCTYPE html>
 @extends('starter')
-
 @section('content')
-
-<div class='formulario'>
-<form id="formx" method="POST">
+    <div class="formulario">
+        <form id="formx" method="POST">
             <h4>Ingresa tus datos y consultas, <br> te contactaremos lo más pronto posible!</h4>
             <input
              type="text"
@@ -30,5 +29,4 @@
              onclick="alerta();">Enviar</button>
         </form>
     </div>
-</div>
 @endsection

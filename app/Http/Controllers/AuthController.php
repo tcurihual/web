@@ -30,7 +30,7 @@ class AuthController extends Controller
         $usuario->contrasena = Hash::make($request->contrasena);
         $query = $usuario->save();
         if($query){
-            return back()->with('success','Te registraste correctamente');
+            return back()->with('success','Te registraste correctamente'); 
         }else{
             return back()->with('fail','Ocurrio un error');
         }
@@ -45,7 +45,7 @@ class AuthController extends Controller
         if($usuario){
             if(Hash::check($request->contrasena, $usuario->contrasena)){
                 $request->session()->put('loginId', $usuario->id);
-                return redirect(('dashboard'));
+                return redirect(('starter'));
             }else{
                 return back()->with('fail','La contrasena no es la misma');
             }
@@ -53,17 +53,17 @@ class AuthController extends Controller
             return back()->with('fail','Este correo no esta registrado');
         }
     }
-    public function dashboard(){
+    public function starter(){
         $data = array();
         if(Session::has('loginId')){
             $data = Usuario::where('id', '=', Session::get('loginId'))->first();
         }
-        return view('dashboard', compact('data'));
+        return view('starter', compact('data'));
     }
     public function logout(){
         if(Session::has('loginId')){
             Session::pull('loginId');
-            return redirect('login');
+            return redirect('starter');
         }
     }
 }
