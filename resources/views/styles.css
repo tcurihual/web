@@ -1,0 +1,78 @@
+/*maquetado inicio pagina*/
+/*en el asterisco se definen estilos, ira la misma parte al principio
+para mantener el estilo del inicio*/
+*{
+    margin: 0; /*los margenes seran de cero*/
+    padding: 0; /*el relleno sera de 0*/
+    border: none; /*no habran bordes*/
+    outline: none; /*no habran contornos(es como otro borde, pero fuera va fuera de este, y mas grueso)*/
+    box-sizing: border-box; /*esto hace que el navegador tenga en cuenta el border y el padding de los elementos*/
+    font-family: "Ubuntu", sans-serif; /*fuente elegida*/
+    text-decoration: none; /*se le sacan los subrayados a las etiquetas de tipo hypervinculo*/
+}
+body{
+    background: linear-gradient(90deg,rgba(0,0,0,0.5),rgba(0,0,0,0.9)),/*se le asigna un degradado a la imagen del inicio, en 90 grados, es decir a la izquierda*/
+    url(../media/imgs/bg.png) no-repeat center center fixed; /*la imagen no se repite,los dos center juntan los elementos al medio, sirve para no dejar espacios en la pagina*/
+    background-size: cover;/*escala la imagen al menor tamaño posible, para llenar el contenedor*/
+}
+nav{
+    position: absolute;/*se posiciona lo mas cercano posible al elemento anterior, como no hay ninguno lo hace a la izquierda*/
+    height: 100%;/*su altura ocupa toda la pagina web*/
+    background: rgba(240, 255, 255, 0.85);/*color del menu, con un 15% de transparencia*/
+    width: 3.7%;/*tamaño del menu sin abrirse*/
+    overflow: hidden;/*hace que los elementos que sean mas grandes no se vean, de esta manera no se ven los textos del menu, solo los iconos/logo*/
+    transition: width 0.3s linear;/*una vez se altere el ancho que ocurra una transicion que tendra la misma velocidad de principio a fin*/
+}
+.logo{
+    text-align: center; /*el texto se centra*/
+    display: flex; /*hace que los items se alineen*/
+    margin: 1% 0 0 1%;/*top,right,bottom,left respectivamente*/
+}
+.logo img{/*tamaño logo*/
+    width: 60px;
+    height: 60px;
+}
+.logo span{ /*texto que acompaña el logo,negrita, separacion,tamaño */
+    font-weight: bold;
+    padding-left: 1%;
+    font-size: 30px;
+}
+a{/*hypervinculos*/
+    color: rgb(83, 83, 83);
+    font-size: 14px;
+    display: flex;
+    width: 300px;
+}
+.fas{/*position: iconos, posicion cambia segun top*/
+    position: relative;
+    width: 70px;
+    height: 40px;
+    top: 14px;
+    font-size: 20px;
+    text-align: center;
+}
+.nav-item{/*texto que va con los iconos,*/
+    position: relative;
+    top: 12px;
+    margin-left: 10px;
+}
+a:hover{/*cuando el mouse pasa por encima, el elemento cambia de color a el que esta establecido*/
+    background: rgb(240, 245, 245);
+}
+nav:hover{/*lo mismo de arriba, pero se le da un ancho, y transicion para cuando se abra el menu*/
+    width: 280px;
+    transition: all 0.5s ease;
+}
+.texto h1{
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 30px;
+    position: relative;
+    top: 330px;
+    text-align: center;
+}
+footer{/*se posiciona lo mas cercano al elemento anterior, con un margen de 1600 pixeles, y al final de la pagina*/
+    color: #ffffff;
+    position: absolute; 
+    top: 950px;
+    margin: 0 0 0 1600px;
+}
