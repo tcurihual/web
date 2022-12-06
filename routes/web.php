@@ -16,7 +16,12 @@ use App\Http\Controllers\AuthController;
 Route::get('/', function (){
     return view('starter');
 });
-
+Route::get('/quienes-somos', function (){
+    return view('pags.quienes');
+});
+Route::get('/productos', function (){
+    return view('pags.productos');
+});
 Route::get('/contacto', function (){
     return view('pags.contacto');
 });
@@ -27,10 +32,5 @@ Route::post('/registro-usuario', [AuthController::class,'registroUsuario'])->nam
 Route::post('/login-usuario', [AuthController::class,'loginUsuario'])->name('login-usuario');
 Route::get('/dashboard', [AuthController::class,'dashboard'])->middleware('isLogged');
 Route::get('/logout', [AuthController::class,'logout']);
-
 });
-    return view('pags.mensajes');
-Route::get('/quienes-somos', function (){
 
-    return view('pags.quienes');
-});
